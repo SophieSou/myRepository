@@ -1,2 +1,2 @@
-a = 2
-print("coucou", a)
+def moyenne(values):
+    return sum(values)/len(values)
