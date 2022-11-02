@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>LCE</p>"
+    return "<p>Modification SSO 2 novembre 2022</p>"
 
 if __name__ == "__main__":
 
