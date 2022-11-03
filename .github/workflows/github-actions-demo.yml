@@ -11,7 +11,7 @@ jobs:
       - run: pytest test_lib.py
 
       - name: 'Upload Artifact'
-        if : failure()
+        # if : failure()
         uses: actions/upload-artifact@v3
         with:
           name: my-artifact
