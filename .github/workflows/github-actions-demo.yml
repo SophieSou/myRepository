@@ -4,5 +4,13 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: python3 test_lib.py
+      - run: ls -la
+      - uses: actions/checkout@v3 #permet de récupérer les fichiers dans git
+      - run: ls -la
+      - run: pip3 install pytest
+      - run: pytest test_lib.py
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: log.txt
