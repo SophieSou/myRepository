@@ -4,7 +4,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: docker build -t sso_test .
       - run: ls -la
       - uses: actions/checkout@v3 #permet de récupérer les fichiers dans git
       - run: ls -la
@@ -17,3 +16,9 @@ jobs:
         with:
           name: my-artifact
           path: log.txt
+
+  BuildDockerImage :
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 #permet de récupérer les fichiers dans git
+      - run: docker build -t sso_test .
