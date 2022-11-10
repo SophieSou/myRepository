@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: docker -v
+      - run: docker build -t
       - run: ls -la
       - uses: actions/checkout@v3 #permet de récupérer les fichiers dans git
       - run: ls -la
